@@ -24,25 +24,20 @@ export function TaskList() {
     }
 
     setTasks(result => [...result, newTask])
-    setNewTaskTitle('')
   }
 
 
   function handleToggleTaskCompletion(id: number) {
-    const updateTask = tasks.map(task => 
-      task.id === id ? {
+    const updateTask = tasks.map(task => {
+      task.id === id {
         ...task,
         isComplete: !task.isComplete
-      } : task)
+      }
+    })
     
-    setTasks(updateTask)
-
   }
 
   function handleRemoveTask(id: number) {
-    const removeTasks = tasks.filter(task => task.id !== id)
-
-    setTasks(removeTasks)
   }
 
   return (

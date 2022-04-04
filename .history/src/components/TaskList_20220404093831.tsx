@@ -24,7 +24,6 @@ export function TaskList() {
     }
 
     setTasks(result => [...result, newTask])
-    setNewTaskTitle('')
   }
 
 

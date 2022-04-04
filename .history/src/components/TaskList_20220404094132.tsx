@@ -15,7 +15,7 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   function handleCreateNewTask() {
-    if(!newTaskTitle) return; //se nao for vazio o input
+    if(newTaskTitle) return; //se nao for vazio o input
 
     const newTask = {
       id: Math.random(),

@@ -13,6 +13,7 @@ interface Task {
 export function TaskList() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
+  console.log(newTaskTitle)
 
   function handleCreateNewTask() {
     if(!newTaskTitle) return; //se nao for vazio o input
@@ -24,7 +25,6 @@ export function TaskList() {
     }
 
     setTasks(result => [...result, newTask])
-    setNewTaskTitle('')
   }
 
 

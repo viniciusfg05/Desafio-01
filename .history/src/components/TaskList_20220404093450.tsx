@@ -24,7 +24,6 @@ export function TaskList() {
     }
 
     setTasks(result => [...result, newTask])
-    setNewTaskTitle('')
   }
 
 
@@ -35,14 +34,9 @@ export function TaskList() {
         isComplete: !task.isComplete
       } : task)
     
-    setTasks(updateTask)
-
   }
 
   function handleRemoveTask(id: number) {
-    const removeTasks = tasks.filter(task => task.id !== id)
-
-    setTasks(removeTasks)
   }
 
   return (
